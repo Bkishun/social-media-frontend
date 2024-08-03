@@ -4,7 +4,7 @@ import axios from 'axios';
 // Thunk to fetch a single video by ID
 export const fetchVideoById = createAsyncThunk('video/fetchVideoById', async (videoId, { rejectWithValue }) => {
   try {
-    const response = await axios.get(`/api/v1/videos/v/${videoId}`);
+    const response = await axios.get(`https://social-media-api-e1dc.onrender.com/api/v1/videos/v/${videoId}`);
     console.log(response.data.data)
     return response.data.data;
 

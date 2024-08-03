@@ -11,7 +11,7 @@ export const getAllVideos = createAsyncThunk('videos/getAllVideos', async({query
             sortType,
         });
 
-        const response = await axios.get(`/api/v1/videos?${params.toString()}`)
+        const response = await axios.get(`https://social-media-api-e1dc.onrender.com/api/v1/videos?${params.toString()}`)
         if(response.status === 200){
             return response.data.data
         }
@@ -22,7 +22,7 @@ export const getAllVideos = createAsyncThunk('videos/getAllVideos', async({query
 
 export const publishVideo = createAsyncThunk('videos/publishVideo', async (formData, { rejectWithValue }) => {
     try {
-      const response = await axios.post('/api/v1/videos', formData, {
+      const response = await axios.post('https://social-media-api-e1dc.onrender.com/api/v1/videos', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }

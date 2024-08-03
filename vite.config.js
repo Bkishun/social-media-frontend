@@ -6,7 +6,7 @@ export default defineConfig({
   server:{
     proxy: {
       // '/api' :  "http://localhost:8000"
-      '/api' :  "https://social-media-app-full-stack-ofrq.onrender.com"
+      '/api' :  "https://social-media-api-e1dc.onrender.com"
     }
   },
   plugins: [react()],

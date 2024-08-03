@@ -6,7 +6,7 @@ export const fetchCurrentUser = createAsyncThunk(
   'auth/fetchCurrentUser',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get('/api/v1/users/current-user', {
+      const response = await axios.get('https://social-media-api-e1dc.onrender.com/api/v1/users/current-user', {
         withCredentials: true,
       });
 
@@ -26,7 +26,7 @@ export const loginUser = createAsyncThunk(
   'auth/loginUser',
   async ({ email, password }, { rejectWithValue }) => {
     try {
-      const response = await axios.post('/api/v1/users/login', {
+      const response = await axios.post('https://social-media-api-e1dc.onrender.com/api/v1/users/login', {
         email,
         password,
       });
@@ -47,7 +47,7 @@ export const logoutUser = createAsyncThunk(
   'auth/logoutUser',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.post('/api/v1/users/logout', {}, {
+      const response = await axios.post('https://social-media-api-e1dc.onrender.com/api/v1/users/logout', {}, {
         withCredentials: true,
       });
 
